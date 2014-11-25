@@ -8,5 +8,8 @@ Player.prototype.picks = function() {
 
 function Game(){
 
-  
+};
+
+Game.prototype.winner = function() {
+  // body...
 };
