@@ -83,6 +83,14 @@ describe("Rock-Paper-Scissors", function() {
 
       });
 
+      it('should beat rock', function (){
+
+        player1.picks('spock');
+        player2.picks('rock');
+        expect(game.winner()).toBe(player1);
+
+      });
+
     });
 
   describe('draws', function() {
