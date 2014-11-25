@@ -11,6 +11,6 @@ function Game(){
 };
 
 Game.prototype.winner = function() {
-  return player1;
+  return this.player1;
 };
 
