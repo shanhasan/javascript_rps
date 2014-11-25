@@ -13,8 +13,8 @@ function Game(player1, player2){
 
 
 Game.prototype.winner = function() {
-	var rules = {'rock' : 'scissors', 'paper' : 'rock', 'scissors' : 'paper'};
-
+	var rules = {'rock' : 'scissors', 'paper' : 'rock', 'scissors' : 'paper', 'spock' : 'scissors'};
+  
   if (this.player1.pick == this.player2.pick){
     return null;
   } else if (rules[this.player1.pick] == this.player2.pick){
