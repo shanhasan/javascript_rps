@@ -11,7 +11,13 @@ function Game(player1, player2){
   this.player2 = player2;
 };
 
-Game.prototype.winner = function() {
-  return this.player1;
+Game.prototype.winner = function(player1, player2) {
+  
+  var {'rock' : 'scissors', 'paper' : 'rock', 'scissors' : 'paper'};
+
+  if (player1.pick == player2.pick){
+    return null;
+  };
+
 };
 
