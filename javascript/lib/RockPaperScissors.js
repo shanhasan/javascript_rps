@@ -1,0 +1,8 @@
+function Player(){
+
+};
+
+function Game(){
+
+  
+};
