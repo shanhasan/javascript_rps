@@ -25,7 +25,7 @@ Game.prototype.winner = function() {
 
   if (this.player1.pick === this.player2.pick){
     return null;
-  } else if (Object.keys(this.RULES[this.player1.pick])[0] == this.player2.pick){
+  } else if (Object.keys(this.RULES[this.player1.pick])[0] == this.player2.pick || Object.keys(this.RULES[this.player1.pick])[1] == this.player2.pick){
   	return this.player1
   } else {
   	return this.player2
