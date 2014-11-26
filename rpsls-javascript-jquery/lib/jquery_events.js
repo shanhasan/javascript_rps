@@ -6,6 +6,6 @@ $(document).ready(function(){
   	Ming.picks($(this).data('pick'));
   	console.log($(this).data('pick'));
   	Shan.picks('lizard');
-    $('#results').html(game.winningMessage());
+    $('#results').prepend('<li>' + game.winningMessage() + '<li>' );
   });
 })
