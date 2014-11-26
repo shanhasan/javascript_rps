@@ -4,8 +4,13 @@ $(document).ready(function(){
   var game = new Game (Shan, Ming);
   $('.choices img').on('click', function(){
   	Ming.picks($(this).data('pick'));
-  	console.log($(this).data('pick'));
-  	Shan.picks('lizard');
-    $('#results').append('<li>' + game.winningMessage() + '</li>' );
+
+		var array = [];
+		$('.choices img').each(function() {
+			array.push($(this).data('pick'));
+		});
+		Shan.picks(array[Math.floor(Math.random() * array.length)]);
+
+    $('#results').append('<li>' + game.winningMessage() + '</li>');
   });
 })
