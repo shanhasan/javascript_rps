@@ -3,8 +3,9 @@ $(document).ready(function(){
   var Shan = new Player ('Shan');
   var game = new Game (Shan, Ming);
   $('.choices img').on('click', function(){
-    Ming.picks('lizard');
-    Shan.picks('paper');
+  	Ming.picks($(this).data('pick'));
+  	console.log($(this).data('pick'));
+  	Shan.picks('lizard');
     $('#results').html(game.winningMessage());
   });
 })
