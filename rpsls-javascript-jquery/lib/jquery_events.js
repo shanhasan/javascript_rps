@@ -11,6 +11,10 @@ $(document).ready(function(){
 		});
 		Shan.picks(array[Math.floor(Math.random() * array.length)]);
 
+    $('<li>' + game.winningMessage() + '</li>').prependTo('#results').fadeIn();
+    $('li:nth-child(5)').fadeOut(3000, function(){
+      $(this).remove();
+      })
     $('#results').append('<li>' + game.winningMessage() + '</li>');
   });
 })
