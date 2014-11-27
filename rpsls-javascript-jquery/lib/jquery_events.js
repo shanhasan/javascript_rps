@@ -38,7 +38,7 @@ $(document).ready(function(){
 		console.log("++++++++++++++++++++++++++++++");
 
 		var frequency = {};
-<<<<<<< HEAD
+
 		history.forEach(function(element){
 			frequency[element] === undefined ? frequency[element] = 1 : frequency[element]++;
 			console.log(frequency);
@@ -54,8 +54,8 @@ $(document).ready(function(){
       // keys.push(value);
       return value;
     });
-=======
->>>>>>> c4e1b9f25b4f9a4a89d041de723af16f0d36a34f
+
+
 
     var x = [1,2,3,2,5,7];
     var largest = Math.max.apply(Math, x);
@@ -66,11 +66,9 @@ $(document).ready(function(){
     console.log(x);
 
 
-<<<<<<< HEAD
-=======
+
 			// console.log(frequency);
 		});
->>>>>>> c4e1b9f25b4f9a4a89d041de723af16f0d36a34f
 
 		var keysAndValues = [];
 
