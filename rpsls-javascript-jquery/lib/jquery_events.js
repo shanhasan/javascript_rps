@@ -37,17 +37,32 @@ $(document).ready(function(){
 		console.log("Computer then -> " + computerChooses);
 		console.log("++++++++++++++++++++++++++++++");
 
-
-
-
 		var frequency = {};
-
 		history.forEach(function(element){
-
 			frequency[element] === undefined ? frequency[element] = 1 : frequency[element]++;
-
 			console.log(frequency);
 		});
+
+    // var keys = Object.keys(frequency);
+
+    var keys = frequency; 
+    keys = $.map(frequency, function (value) {
+      
+
+      // keys.push(key);
+      // keys.push(value);
+      return value;
+    });
+
+    var x = [1,2,3,2,5,7];
+    var largest = Math.max.apply(Math, x);
+    return largest
+    };
+
+
+    console.log(x);
+
+
 
 	};
 
