@@ -37,18 +37,33 @@ $(document).ready(function(){
 		console.log("Computer then -> " + computerChooses);
 		console.log("++++++++++++++++++++++++++++++");
 
-
-
-
 		var frequency = {};
 
 		history.forEach(function(element){
 
 			frequency[element] === undefined ? frequency[element] = 1 : frequency[element]++;
 
-			console.log(frequency);
+			// console.log(frequency);
 		});
 
+		var keysAndValues = [];
+
+		for(var key in frequency){
+			keysAndValues.push(key, frequency[key])
+		}
+
+		console.log(keysAndValues);
+
+		$(frequency).sort(function (a, b){
+			if (a.name > b.name) {
+				return 1;
+			}
+			if (a.name < b.name) {
+				return -1;
+			}
+			//a must be equal to b
+			return 0;
+		});
 	};
 
 		
