@@ -25,9 +25,22 @@ $(document).ready(function(){
         var lastSelection = history[history.length -1];
         var lastSelectionIndex = computerChooses.indexOf(lastSelection);
 
+        computerChooses.splice(lastSelectionIndex, 1);
+
+        var rightObject = game.PAIRS
+
         console.log(computerChooses);
 
+        console.log(game.PAIRS[lastSelection]);
+        
+        var justChecking = game.PAIRS[game.PAIRS.length -1];
+
+
+        console.log(this.justChecking);
+
+
       };
+
       
         $('<li>' + game.winningMessage() + '</li>').prependTo('#results').fadeIn();
         $('li:nth-child(5)').fadeOut(1000, function(){
@@ -40,12 +53,14 @@ $(document).ready(function(){
         if (history.length > 10){
           history.shift();      
         };
-   });
-})
+
+
 
     //console.log(history.join(" "));
     // console.log(game.PAIRS);
 
+  });
+})
       // arrayOfChoices.splice(lastSelection);
 
       // arrayOfChoices.remove(game.PAIRS[lastSelection][1]);
