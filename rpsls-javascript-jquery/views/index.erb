@@ -1,0 +1,69 @@
+<!doctype>
+<html>
+  <head>
+    <title>Rock Paper Scissors Lizard Spock</title>
+    <style>
+    body {
+      font-family: 'Helvetica Neue';
+      margin: 15px 0 0 30px;
+    }
+
+    .choices img {
+      width: 15%;
+      margin-right: 2.5%;
+      cursor: pointer;
+      opacity: 0.5;
+      transition: 1s all ease;
+    }
+
+    .choices img:hover {
+      opacity: 1;
+    }
+
+    h1 {
+      text-transform: uppercase;
+      font-family: "Comic Sans MS";
+      text-align: center;
+      width: 87%;
+    }
+
+    h2, h3 {
+      text-transform: capitalize;
+    }
+
+    #results {
+      list-style: none;
+    }
+
+    #results li {
+      background: #fff;
+      color: #333399;
+      font-size: 24px;
+      border-radius: 8px;
+      font-family: "Comic Sans MS";
+      text-align: center;
+      padding: 15px;
+      width: 80%;
+      margin-bottom: 10px;
+      display:none;
+    }
+    </style>
+  </head>
+  <body>
+    <h1>Beat The Simpsons</h1>
+    <div class='choices'>
+      <img id="maggie" src="images/maggie.png" data-pick="maggie">
+      <img id="lisa" src="images/lisa.png" data-pick="lisa">
+      <img id="marge" src="images/marge.png" data-pick="marge">
+      <img id="bart" src="images/bart.png" data-pick="bart">
+      <img id="homer" src="images/homer.png" data-pick="homer">
+    </div>
+    <ul id="results">
+    </ul>
+
+    <script src='javascript/Player.js'></script>
+    <script src='javascript/Game.js'></script>
+    <script src='https://code.jquery.com/jquery-2.1.1.min.js'></script>
+    <script src='javascript/app.js'></script>
+  </body>
+</html>
