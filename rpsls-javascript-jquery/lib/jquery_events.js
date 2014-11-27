@@ -6,7 +6,6 @@ $(document).ready(function(){
   var arrayOfChoices = [];
   var computerChooses = [];
   var lastSelectionIndex;
-  var fileName;
 
   $('.choices img').each(function() {
   	arrayOfChoices.push($(this).data('pick'));
@@ -14,8 +13,6 @@ $(document).ready(function(){
 
   $('.choices img').on('click', function(){
   	you.picks($(this).data('pick'));
-
-    console.log(fileName);
 
 	if (history.length == 0){
 
@@ -51,7 +48,28 @@ $(document).ready(function(){
 			keysAndValues.push(key, frequency[key])
 		}
 
-		console.log(keysAndValues);
+		var values = [];
+		var maxValue;
+
+		for(var key in frequency){
+			values.push(frequency[key])
+		}
+
+		maxValue = Math.max.apply(Math, values);
+
+		console.log(maxValue);
+
+		for(var key in frequency){
+			if (frequency[key] === maxValue) {
+				console.log(key);
+			}
+		}
+
+
+		//console.log(keysAndValues);
+
+
+
 
     };
 
