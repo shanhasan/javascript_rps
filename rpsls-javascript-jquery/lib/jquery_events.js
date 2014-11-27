@@ -7,6 +7,12 @@ $(document).ready(function(){
   var computerChooses = [];
   var lastSelectionIndex;
 
+   $('#homer').hover(function(){
+   	$(this).attr('src','images/homer_hover.png');
+   		}, function() {
+   			$(this).attr('src','images/homer.png');
+   });
+
   $('.choices img').each(function() {
   	arrayOfChoices.push($(this).data('pick'));
   });
