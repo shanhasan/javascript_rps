@@ -1,18 +1,21 @@
 $(document).ready(function(){
-  var Shan = new Player ('Shan');
+  var you = new Player ('you');
   var Computer = new Player ('Computer');
-  var game = new Game (Shan, Computer);
+  var game = new Game (you, Computer);
   var history = new Array();
   var arrayOfChoices = [];
   var computerChooses = [];
   var lastSelectionIndex;
+  var fileName;
 
   $('.choices img').each(function() {
   	arrayOfChoices.push($(this).data('pick'));
   });
 
   $('.choices img').on('click', function(){
-  	Shan.picks($(this).data('pick'));
+  	you.picks($(this).data('pick'));
+
+    console.log(fileName);
 
 	if (history.length == 0){
 
@@ -51,14 +54,14 @@ $(document).ready(function(){
 		console.log(keysAndValues);
 
     };
-		
+
     $('<li>' + game.winningMessage() + '</li>').prependTo('#results').fadeIn();
     $('li:nth-child(5)').fadeOut(1000, function(){
       $(this).remove();
       })
     $('#results').append('<li>' + game.winningMessage() + '</li>');
 		
-		history.push(Shan.pick);
+		history.push(you.pick);
 
 		if (history.length > 10){
 			history.shift();			
