@@ -7,10 +7,34 @@ $(document).ready(function(){
   var computerChooses = [];
   var lastSelectionIndex;
 
-   $('#homer').hover(function(){
-   	$(this).attr('src','images/homer_hover.png');
+   $('#maggie').hover(function(){
+   	$(this).attr('src','images/maggie_hover.png');
    		}, function() {
-   			$(this).attr('src','images/homer.png');
+   			$(this).attr('src','images/maggie.png');
+   });
+
+   $('#lisa').hover(function(){
+    $(this).attr('src','images/lisa_hover.png');
+      }, function() {
+        $(this).attr('src','images/lisa.png');
+   });
+
+   $('#marge').hover(function(){
+    $(this).attr('src','images/marge_hover.png');
+      }, function() {
+        $(this).attr('src','images/marge.png');
+   });
+
+   $('#bart').hover(function(){
+    $(this).attr('src','images/bart_hover.png');
+      }, function() {
+        $(this).attr('src','images/bart.png');
+   });
+
+   $('#homer').hover(function(){
+    $(this).attr('src','images/homer_hover.png');
+      }, function() {
+        $(this).attr('src','images/homer.png');
    });
 
   $('.choices img').each(function() {
