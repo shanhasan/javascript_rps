@@ -9,7 +9,7 @@ Game.prototype.PAIRS = {
   // scissors: { paper: 'cuts', lizard: 'decapitates' },
   // lizard:   { spock: 'poisons', paper: 'eats' },
   // spock:    { rock: 'vaporises', scissors: 'smashes' }
-  maggie:     { marge: 'crushes', bart: 'squashes' },
+  maggie:     { marge: 'scares', bart: 'jumps on' },
   lisa:    { maggie: 'covers', homer: 'disproves' },
   marge: { lisa: 'cuts', bart: 'decapitates' },
   bart:   { homer: 'poisons', lisa: 'eats' },
