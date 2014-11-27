@@ -34,10 +34,20 @@ Game.prototype.loser = function() {
 Game.prototype.winningMessage = function() {
   var message;
 
+  var winner;
+  var loser;
+
   if(this.winner()) {
-    message = [this.winner().name,
+    if(this.winner() === this.player1) {
+      winner = this.winner().name;
+      loser = this.loser().pick;
+    }else {
+      winner = this.player1.pick;
+      loser = this.loser().name;
+    }
+    message = [winner,
     this._victoryVerbFor(this.winner().pick, this.loser().pick),
-    this.loser().name].join(' ');
+    loser].join(' ');
   } else {
     message = 'Draw';
   }
