@@ -4,11 +4,16 @@ function Game(player1, player2) {
 }
 
 Game.prototype.PAIRS = {
-  rock:     { scissors: 'crushes', lizard: 'squashes' },
-  paper:    { rock: 'covers', spock: 'disproves' },
-  scissors: { paper: 'cuts', lizard: 'decapitates' },
-  lizard:   { spock: 'poisons', paper: 'eats' },
-  spock:    { rock: 'vaporises', scissors: 'smashes' }
+  // rock:     { scissors: 'crushes', lizard: 'squashes' },
+  // paper:    { rock: 'covers', spock: 'disproves' },
+  // scissors: { paper: 'cuts', lizard: 'decapitates' },
+  // lizard:   { spock: 'poisons', paper: 'eats' },
+  // spock:    { rock: 'vaporises', scissors: 'smashes' }
+  maggie:     { marge: 'crushes', bart: 'squashes' },
+  lisa:    { maggie: 'covers', homer: 'disproves' },
+  marge: { lisa: 'cuts', bart: 'decapitates' },
+  bart:   { homer: 'poisons', lisa: 'eats' },
+  homer:    { maggie: 'vaporises', marge: 'smashes' }
 }
 
 Game.prototype.winner = function() {

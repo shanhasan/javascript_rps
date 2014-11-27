@@ -65,12 +65,6 @@ $(document).ready(function(){
 			}
 		}
 
-
-		//console.log(keysAndValues);
-
-
-
-
     };
 
     $('<li>' + game.winningMessage() + '</li>').prependTo('#results').fadeIn();
