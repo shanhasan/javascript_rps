@@ -40,7 +40,7 @@ Game.prototype.winningMessage = function() {
   if(this.winner()) {
     if(this.winner() === this.player1) {
       winner = this.winner().name;
-      loser = this.loser().pick;
+      loser = this.winner().pick;
     }else {
       winner = this.player1.pick;
       loser = this.loser().name;
