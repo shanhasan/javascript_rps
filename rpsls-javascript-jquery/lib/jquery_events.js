@@ -22,9 +22,7 @@ $(document).ready(function(){
 		computerChooses.length = 0;
 		computerChooses = arrayOfChoices.slice();
 		var lastSelection = history[history.length -1];
-		// lastSelectionIndex = computerChooses.indexOf(lastSelection);
-		// computerChooses.splice(lastSelectionIndex, 1);
-
+		
 		removeItemFromArray(lastSelection);
 		removeItemFromArray(Object.keys(game.PAIRS[lastSelection])[0]);
 		removeItemFromArray(Object.keys(game.PAIRS[lastSelection])[1]);
@@ -44,32 +42,6 @@ $(document).ready(function(){
 			console.log(frequency);
 		});
 
-    // var keys = Object.keys(frequency);
-
-    var keys = frequency; 
-    keys = $.map(frequency, function (value) {
-      
-
-      // keys.push(key);
-      // keys.push(value);
-      return value;
-    });
-
-
-
-    var x = [1,2,3,2,5,7];
-    var largest = Math.max.apply(Math, x);
-    return largest
-    };
-
-
-    console.log(x);
-
-
-
-			// console.log(frequency);
-		});
-
 		var keysAndValues = [];
 
 		for(var key in frequency){
@@ -78,28 +50,13 @@ $(document).ready(function(){
 
 		console.log(keysAndValues);
 
-		$(frequency).sort(function (a, b){
-			if (a.name > b.name) {
-				return 1;
-			}
-			if (a.name < b.name) {
-				return -1;
-			}
-			//a must be equal to b
-			return 0;
-		});
-	};
-
+    };
 		
     $('<li>' + game.winningMessage() + '</li>').prependTo('#results').fadeIn();
     $('li:nth-child(5)').fadeOut(1000, function(){
       $(this).remove();
       })
     $('#results').append('<li>' + game.winningMessage() + '</li>');
-
-  	// $('li').each(function() {
-		// 	history.push($(this).text());
-		// });
 		
 		history.push(Shan.pick);
 
